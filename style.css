@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to top right, #fddbb5, #b7e0f5);
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  color: #333;
+  position: relative;
+  z-index: 20;
+}
+
+.search-box {
+  position: relative;
+  z-index: 10;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 350px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#suggestion-box {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 350px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: none;
+  z-index: 15;
+}
+
+#suggestion-box li {
+  text-align: left;
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#suggestion-box li:hover {
+  background: #f0f0f0;
+}
+
+.preset-cities {
+  display: flex;
+  gap: 10px;
+  margin-top: -8px;
+  position: fixed;
+  left: 17.5%;
+  z-index: 5;
+}
+
+.city-btn {
+  width: 110px;
+  background: #e5f1f39c;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #00000078;
+}
+
+.temp-toggle {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.temp-toggle span {
+  color: black;
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #a2c0df;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.weather-info {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.weather-icon img {
+  width: 80px;
+}
+
+#temperature {
+  font-size: 70px;
+  font-weight: bold;
+  color: #222;
+}
+
+#description {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#feels-like {
+  padding-top: 5px;
+}
+
+.forecast-title {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: -25%;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  width: 150px;
+  height: 200px;
+  text-align: center;
+  align-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 40px;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  padding-top: 15px;
+}
+
+.card p {
+  padding-top: 10px;
+}
+
+.weather-info {
+  display: none;
+}
+.error {
+  display: none;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 15%;
+}

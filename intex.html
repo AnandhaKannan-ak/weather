@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Enter city name" />
+        <div id="suggestion-box"></div>
+        <button id="search-btn">Search</button>
+      </div>
+      <div class="temp-toggle">
+        <span>°C</span>
+        <label class="switch">
+          <input type="checkbox" id="unit-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="preset-cities">
+      <button class="city-btn">New York</button>
+      <button class="city-btn">London</button>
+      <button class="city-btn">Tokyo</button>
+    </div>
+
+    <main>
+      <p class="error">Invaild City Name</p>
+      <div class="weather-info">
+        <div class="weather-icon">
+          <img src="img/sun.png" alt="weather" />
+        </div>
+        <h1 id="temperature">19°C</h1>
+        <p id="description">Clear Sky</p>
+        <p id="feels-like">Feels like 21°C</p>
+
+        <h2 class="forecast-title">Hourly Forecast</h2>
+        <div class="forecast">
+          <div class="card">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4151/4151022.png"
+              alt="wind"
+            />
+            <h3>Wind</h3>
+            <p id="wind">15 km/h</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/728/728093.png"
+              alt="humidity"
+            />
+            <h3>Humidity</h3>
+            <p id="humidity">65%</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+              alt="uv index"
+            />
+            <h3>UV Index</h3>
+            <p id="uv">5 (Moderate)</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
