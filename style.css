@@ -81,7 +81,9 @@ body {
   z-index: 5;
 }
 
-.city-btn {
+.newyork-btn,
+.london-btn,
+.tokyo-btn {
   width: 110px;
   background: #e5f1f39c;
   border: none;

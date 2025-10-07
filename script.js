@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const unitToggle = document.getElementById("unit-toggle");
   const suggestionBox = document.getElementById("suggestion-box");
   const weatherIcon = document.querySelector(".weather-icon img");
+  const newYork = document.querySelector(".newyork-btn");
+  const london = document.querySelector(".london-btn");
+  const tokyo = document.querySelector(".tokyo-btn");
 
   let isCelsius = true;
 
@@ -101,5 +104,17 @@ document.addEventListener("DOMContentLoaded", () => {
   unitToggle.addEventListener("change", () => {
     isCelsius = !isCelsius;
     getWeather(cityInput.value);
+  });
+
+  newYork.addEventListener("click", () => {
+    getWeather("New York");
+  });
+
+  london.addEventListener("click", () => {
+    getWeather("London");
+  });
+
+  tokyo.addEventListener("click", () => {
+    getWeather("Tokyo");
   });
 });
